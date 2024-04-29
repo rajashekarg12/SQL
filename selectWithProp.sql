@@ -1,0 +1,1 @@
+select * from ${PROJECT_NAME};
