@@ -1,1 +1,1 @@
-select * from ${PROJECT_NAME};
+select * from ${FD_PROJECT_NAME};
