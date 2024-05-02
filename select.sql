@@ -1,1 +1,1 @@
-select * from FD.cms;
+select * from FD.cms1;
