@@ -1,5 +1,5 @@
 
-CREATE TABLE Employee (
+CREATE TABLE Employee1 (
     ID INT PRIMARY KEY,
     Name VARCHAR(20),
     Age INT,
