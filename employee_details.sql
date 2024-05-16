@@ -1,24 +1,39 @@
--- Create a PL/SQL file named "employee_details.sql"
+-- Create a PL/SQL file named "student_example.sql"
 
--- Procedure to retrieve employee details
-CREATE OR REPLACE PROCEDURE get_employee_details(
-    p_employee_id IN NUMBER,
-    o_employee_name OUT VARCHAR2,
-    o_employee_salary OUT NUMBER,
-    o_employee_department OUT VARCHAR2
+-- Create a table for students
+CREATE TABLE students (
+    student_id NUMBER PRIMARY KEY,
+    student_name VARCHAR2(100),
+    student_age NUMBER,
+    student_grade VARCHAR2(10)
+);
+
+-- Insert some sample data
+INSERT INTO students (student_id, student_name, student_age, student_grade)
+VALUES (1, 'John Doe', 20, 'A');
+
+INSERT INTO students (student_id, student_name, student_age, student_grade)
+VALUES (2, 'Jane Smith', 22, 'B');
+
+-- Procedure to retrieve student details
+CREATE OR REPLACE PROCEDURE get_student_details(
+    p_student_id IN NUMBER,
+    o_student_name OUT VARCHAR2,
+    o_student_age OUT NUMBER,
+    o_student_grade OUT VARCHAR2
 )
 AS
 BEGIN
-    -- Retrieve employee details based on employee ID
-    SELECT employee_name, employee_salary, employee_department
-    INTO o_employee_name, o_employee_salary, o_employee_department
-    FROM employees
-    WHERE employee_id = p_employee_id;
+    -- Retrieve student details based on student ID
+    SELECT student_name, student_age, student_grade
+    INTO o_student_name, o_student_age, o_student_grade
+    FROM students
+    WHERE student_id = p_student_id;
 
     -- Exception handling
     EXCEPTION
         WHEN NO_DATA_FOUND THEN
-            DBMS_OUTPUT.PUT_LINE('Employee not found.');
+            DBMS_OUTPUT.PUT_LINE('Student not found.');
         WHEN OTHERS THEN
             DBMS_OUTPUT.PUT_LINE('An error occurred: ' || SQLERRM);
 END;
@@ -26,16 +41,16 @@ END;
 
 -- Example of calling the procedure
 DECLARE
-    v_emp_name VARCHAR2(100);
-    v_emp_salary NUMBER;
-    v_emp_dept VARCHAR2(100);
+    v_stud_name VARCHAR2(100);
+    v_stud_age NUMBER;
+    v_stud_grade VARCHAR2(10);
 BEGIN
-    -- Call the procedure with an employee ID
-    get_employee_details(1001, v_emp_name, v_emp_salary, v_emp_dept);
+    -- Call the procedure with a student ID
+    get_student_details(1, v_stud_name, v_stud_age, v_stud_grade);
 
-    -- Output retrieved employee details
-    DBMS_OUTPUT.PUT_LINE('Employee Name: ' || v_emp_name);
-    DBMS_OUTPUT.PUT_LINE('Employee Salary: ' || v_emp_salary);
-    DBMS_OUTPUT.PUT_LINE('Employee Department: ' || v_emp_dept);
+    -- Output retrieved student details
+    DBMS_OUTPUT.PUT_LINE('Student Name: ' || v_stud_name);
+    DBMS_OUTPUT.PUT_LINE('Student Age: ' || v_stud_age);
+    DBMS_OUTPUT.PUT_LINE('Student Grade: ' || v_stud_grade);
 END;
 /
