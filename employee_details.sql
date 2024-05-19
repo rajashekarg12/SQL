@@ -1,4 +1,5 @@
 -- Create a PL/SQL file named "student_example.sql"
+SET SERVEROUTPUT ON;
 
 -- Drop the table if it exists
 BEGIN
