@@ -1,4 +1,4 @@
-
+set serveroutput on
 CREATE OR REPLACE PROCEDURE generate_warnings AS
 BEGIN
     DECLARE
@@ -20,4 +20,5 @@ BEGIN
         
     END;
 END;
+SHOW ERRORS;
 /
