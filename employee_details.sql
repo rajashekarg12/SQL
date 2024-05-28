@@ -1,5 +1,6 @@
 -- Create a PL/SQL file named "student_example.sql"
 SET SERVEROUTPUT ON;
+spool 'Test1.txt';
 
 -- Drop the table if it exists
 BEGIN
@@ -62,5 +63,6 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Student Name: ' || v_stud_name);
     DBMS_OUTPUT.PUT_LINE('Student Age: ' || v_stud_age);
     DBMS_OUTPUT.PUT_LINE('Student Grade: ' || v_stud_grade);
+spool off;
 END;
 /
