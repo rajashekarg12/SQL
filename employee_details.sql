@@ -1,6 +1,6 @@
 -- Create a PL/SQL file named "student_example.sql"
 SET SERVEROUTPUT ON;
---spool 'Test1.txt';
+spool 'Test1.txt';
 
 -- Drop the table if it exists
 BEGIN
