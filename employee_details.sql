@@ -63,6 +63,7 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Student Name: ' || v_stud_name);
     DBMS_OUTPUT.PUT_LINE('Student Age: ' || v_stud_age);
     DBMS_OUTPUT.PUT_LINE('Student Grade: ' || v_stud_grade);
-spool off;
+
 END;
 /
+spool off;
