@@ -1,9 +1,8 @@
-DROP TABLE errors;
+--DROP TABLE errors;
 CREATE TABLE errors (
     code NUMBER,
     message VARCHAR2(64)
 );
-
 
 CREATE OR REPLACE PROCEDURE p AUTHID DEFINER AS
     name EMPLOYEES.LAST_NAME%TYPE; -- Intentional error: 'name' is not defined
