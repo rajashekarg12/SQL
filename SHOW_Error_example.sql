@@ -17,4 +17,4 @@ EXCEPTION
         INSERT INTO errors (code, message) VALUES (v_code, v_errm);
 END;
 SHOW ERRORS;
-exit;
+
