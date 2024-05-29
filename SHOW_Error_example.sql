@@ -16,4 +16,4 @@ EXCEPTION
         v_errm := SUBSTR(SQLERRM, 1, 64);
         INSERT INTO errors (code, message) VALUES (v_code, v_errm);
 END;
-
+SHOW ERRORS;
