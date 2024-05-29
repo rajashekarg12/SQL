@@ -1,4 +1,4 @@
---DROP TABLE errors;
+DROP TABLE errors;
 CREATE TABLE errors (
     code NUMBER,
     message VARCHAR2(64)
