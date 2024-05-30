@@ -1,5 +1,5 @@
 
-WHENEVER SQLERROR CONTINUE
+WHENEVER SQLERROR CONTINUE;
 spool rajreport.txt;
 
 select CMS_ID , NAME from FD.CMS;
