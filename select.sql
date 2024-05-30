@@ -1,4 +1,4 @@
---select * from student1;
+
 WHENEVER SQLERROR CONTINUE
 spool rajreport.txt;
 
