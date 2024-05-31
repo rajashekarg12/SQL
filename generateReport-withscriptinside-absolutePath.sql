@@ -1,4 +1,4 @@
-SPOLL D:\sqltest\rajtest.txt
+SPOLL 'D:\sqltest\rajtest.txt'
 
 select CMS_ID , NAME from FD.CMS;
 
