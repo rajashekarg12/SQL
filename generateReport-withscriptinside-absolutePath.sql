@@ -1,4 +1,4 @@
-SPOOL 'D:\sqltest\rajtest.txt'
+SPOOL 'D:\sqltest\rajtest.txt';
 
 select CMS_ID , NAME from FD.CMS;
 
