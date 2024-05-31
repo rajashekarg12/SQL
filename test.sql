@@ -1,6 +1,9 @@
--- This is a sample SQL file
-SELECT * FROM users;
+select CMS_ID , NAME from FD.CMS;
 
-WHENEVER SQLERROR CONTINUE
 
-INSERT INTO users (id, name) VALUES (1, 'John Doe');
+select CMS_ID , NAME from FD.CMS;
+
+
+
+select USER_NAME from FD.FD_USER;
+--where CMS_ID=1001
