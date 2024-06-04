@@ -1,9 +1,9 @@
-
-
-select CMS_ID , NAME from FD.CMS;
-
+whenever sqlerror exit sql.sqlcode;
 
 select CMS_ID , NAME from FD.CMS;
+
+
+select CMS_ID , NAME from FD.CMS2;
 
 
 
