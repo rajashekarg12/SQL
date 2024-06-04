@@ -6,3 +6,4 @@ CREATE TABLE country_table987 (
     Address varchar(255),
     City varchar(255)
 );
+@test.sql
