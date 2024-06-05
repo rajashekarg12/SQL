@@ -18,3 +18,6 @@ INSERT INTO students (id, name, gender, age, city) VALUES (6, 'Ishita Rao', 'F',
 INSERT INTO students (id, name, gender, age, city) VALUES (7, 'Rohan Mehta', 'M', 22, 'Pune');
 INSERT INTO students (id, name, gender, age, city) VALUES (8, 'Sana Khan', 'F', 21, 'Kolkata');
 
+
+@test
+
