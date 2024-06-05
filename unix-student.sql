@@ -1,6 +1,7 @@
 -- Drop the table if it exists
 DROP TABLE seasonal_fruits;
 
+
 -- Create the seasonal_fruits table
 CREATE TABLE seasonal_fruits (
     type VARCHAR2(50),
@@ -25,5 +26,5 @@ INSERT INTO seasonal_fruits (type, cost, units, city) VALUES ('Papaya', 2.20, 90
 -- Select all records from the seasonal_fruits table
 
 
-
+Spool off;
 @selectFile.sql
