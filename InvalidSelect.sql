@@ -1,4 +1,4 @@
-select * from student1;
+select * from student88;
 
 select * from student2;
 
