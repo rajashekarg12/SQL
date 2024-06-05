@@ -23,7 +23,6 @@ INSERT INTO seasonal_fruits (type, cost, units, city) VALUES ('Watermelon', 1.80
 INSERT INTO seasonal_fruits (type, cost, units, city) VALUES ('Papaya', 2.20, 90, 'Pune');
 
 -- Select all records from the seasonal_fruits table
-SELECT * FROM seasonal_fruits;
 
 
 
