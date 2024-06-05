@@ -19,4 +19,4 @@ INSERT INTO students (id, name, gender, age, city) VALUES (7, 'Rohan Mehta', 'M'
 INSERT INTO students (id, name, gender, age, city) VALUES (8, 'Sana Khan', 'F', 21, 'Kolkata');
 
 
-@selectFile
+@selectFile.sql
