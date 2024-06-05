@@ -1,4 +1,4 @@
-No Error-- Creating a package with an intentional error
+--No Error-- Creating a package with an intentional error
 SET serveroutput on
 CREATE OR REPLACE PACKAGE test_package IS
     PROCEDURE greet;
