@@ -1,23 +1,30 @@
-Drop table students
+-- Drop the table if it exists
+DROP TABLE seasonal_fruits;
 
--- Create the students table without the city column
-CREATE TABLE students (
-    id INT PRIMARY KEY,
-    name VARCHAR2(100),
-    gender CHAR(1),
-    age INT
+-- Create the seasonal_fruits table
+CREATE TABLE seasonal_fruits (
+    type VARCHAR2(50),
+    cost NUMBER(5,2),
+    units NUMBER,
+    city VARCHAR2(50)
 );
 
 -- Verify the table structure
-DESCRIBE students;
+DESCRIBE seasonal_fruits;
 
--- Insert records into the students table
-INSERT INTO students (id, name, gender, age) VALUES (1, 'Aarav Sharma', 'M', 20);
-INSERT INTO students (id, name, gender, age) VALUES (2, 'Anay Gupta', 'F', 22);
-INSERT INTO students (id, name, gender, age) VALUES (4, 'Diya Singh', 'F', 21);
-INSERT INTO students (id, name, gender, age) VALUES (5, 'Krishna Reddy', 'M', 23);
-INSERT INTO students (id, name, gender, age) VALUES (6, 'Int Rao', 'F', 20);
-INSERT INTO students (id, name, gender, age) VALUES (7, 'Rohan Mehta', 'M', 22);
+-- Insert records into the seasonal_fruits table
+INSERT INTO seasonal_fruits (type, cost, units, city) VALUES ('Apple', 2.50, 100, 'Shimla');
+INSERT INTO seasonal_fruits (type, cost, units, city) VALUES ('Banana', 1.20, 150, 'Mumbai');
+INSERT INTO seasonal_fruits (type, cost, units, city) VALUES ('Orange', 3.00, 200, 'Nagpur');
+INSERT INTO seasonal_fruits (type, cost, units, city) VALUES ('Mango', 4.50, 50, 'Hyderabad');
+INSERT INTO seasonal_fruits (type, cost, units, city) VALUES ('Grapes', 2.80, 120, 'Nashik');
+INSERT INTO seasonal_fruits (type, cost, units, city) VALUES ('Pineapple', 3.50, 80, 'Goa');
+INSERT INTO seasonal_fruits (type, cost, units, city) VALUES ('Watermelon', 1.80, 70, 'Bangalore');
+INSERT INTO seasonal_fruits (type, cost, units, city) VALUES ('Papaya', 2.20, 90, 'Pune');
+
+-- Select all records from the seasonal_fruits table
+SELECT * FROM seasonal_fruits;
+
 
 
 @selectFile.sql
