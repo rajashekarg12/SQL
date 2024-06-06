@@ -15,11 +15,3 @@ CREATE OR REPLACE PACKAGE BODY test_package IS
 END test_package;
 /
     
-
-CREATE OR REPLACE PACKAGE BODY test_package2 IS
-    PROCEDURE greet IS
-    BEGIN
-        dbms_output.put_line('Hello, world!');
-   END greet;
-END test_package;
-/
