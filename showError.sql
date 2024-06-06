@@ -19,7 +19,7 @@ CREATE OR REPLACE PACKAGE test_package2 IS
     PROCEDURE greet;
 END test_package;
 /
---Correcting the package body
+
 CREATE OR REPLACE PACKAGE BODY test_package2 IS
     PROCEDURE greet IS
     BEGIN
