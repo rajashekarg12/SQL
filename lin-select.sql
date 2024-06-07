@@ -15,3 +15,5 @@ CREATE TABLE country_table989 (
     Address varchar(255),
     City varchar(255)
 );
+
+EXIT;
