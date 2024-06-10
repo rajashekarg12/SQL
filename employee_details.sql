@@ -1,7 +1,7 @@
 -- Create a PL/SQL file named "student_example.sql"
 
 -- Drop the table if it exists
-BEGINklkn
+BEGIN
     EXECUTE IMMEDIATE 'DROP TABLE students';
 EXCEPTION
     WHEN OTHERS THEN
@@ -10,7 +10,7 @@ END;
 /
 
 -- Create a table for students
-CREATE TABLE students (
+CREATE TAB students (
     student_id NUMBER PRIMARY KEY,
     student_name VARCHAR2(100),
     student_age NUMBER,
