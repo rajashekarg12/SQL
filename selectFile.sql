@@ -1,2 +1,2 @@
-select * from seasonal_fruits;
+4select * from seasonal_fruits;
 
