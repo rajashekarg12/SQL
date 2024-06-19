@@ -1,15 +1,17 @@
 <DataFix xmlns="http://flexagon.com/database/datafix">
-    <Description>Update email</Description>
+    <Description>Update email address of a pipeline role member</Description>
     <FixSQL>
         UPDATE FD.PIPELINE_ROLE_MEMBER
-        SET EMAIL_ADDRESS = 'jd@gmail'
+        SET EMAIL_ADDRESS = 'jd@gmail.com'
         WHERE PIPELINE_ROLE_MEMBER_ID = 25305;
     </FixSQL>
-    <BackupSQL></BackupSQL>
+    <BackupSQL>
+        CREATE TABLE FD.PIPELINE_ROLE_MEMBER_BKP AS SELECT * FROM FD.PIPELINE_ROLE_MEMBER WHERE PIPELINE_ROLE_MEMBER_ID = 25305;
+    </BackupSQL>
     <Validations>
         <Validation>
-            <Description>Ensure email address is updated</Description>
-            <ValidationSQL>SELECT COUNT(*) FROM FD.PIPELINE_ROLE_MEMBER WHERE PIPELINE_ROLE_MEMBER_ID = 25305</ValidationSQL>
+            <Description>Ensure email address is updated correctly</Description>
+            <ValidationSQL>SELECT COUNT(*) FROM FD.PIPELINE_ROLE_MEMBER WHERE EMAIL_ADDRESS = 'jd@gmail.com' AND PIPELINE_ROLE_MEMBER_ID = 25305</ValidationSQL>
             <Environment>
                 <EnvironmentCode>DEFAULT</EnvironmentCode>
                 <Before>
