@@ -1,0 +1,29 @@
+<DataFix xmlns="http://flexagon.com/database/datafix">
+    <Description>Update first name and last name for student_id 1</Description>
+    <FixSQL>
+        UPDATE student
+        SET first_name = 'Michael', last_name = 'Anderson'
+        WHERE student_id = 1;
+    </FixSQL>
+    <BackupSQL>
+        CREATE TABLE student_backup AS SELECT * FROM student WHERE student_id = 1;
+    </BackupSQL>
+    <Validations>
+        <Validation>
+            <Description>Ensure student record is updated correctly</Description>
+            <ValidationSQL>SELECT COUNT(*) FROM student WHERE first_name = 'Michael' AND last_name = 'Anderson' AND student_id = 1</ValidationSQL>
+            <Environment>
+                <EnvironmentCode>DEFAULT</EnvironmentCode>
+                <Before>
+                    <Equals>0</Equals>
+                </Before>
+                <After>
+                    <Equals>1</Equals>
+                </After>
+                <UpdateCount>
+                    <Equals>1</Equals>
+                </UpdateCount>
+            </Environment>
+        </Validation>
+    </Validations>
+</DataFix>
