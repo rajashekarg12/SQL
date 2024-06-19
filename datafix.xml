@@ -3,13 +3,13 @@
     <FixSQL>
         UPDATE FD.PIPELINE_ROLE_MEMBER
         SET EMAIL_ADDRESS = 'jd@gmail'
-        WHERE PIPELINE_ROLE_MEMBER_ID = 24911;
+        WHERE PIPELINE_ROLE_MEMBER_ID = 25305;
     </FixSQL>
     <BackupSQL></BackupSQL>
     <Validations>
         <Validation>
             <Description>Ensure email address is updated</Description>
-            <ValidationSQL>SELECT COUNT(*) FROM FD.PIPELINE_ROLE_MEMBER WHERE EMAIL_ADDRESS = 'sqltest' AND PIPELINE_ROLE_MEMBER_ID = 24911</ValidationSQL>
+            <ValidationSQL>SELECT COUNT(*) FROM FD.PIPELINE_ROLE_MEMBER WHERE PIPELINE_ROLE_MEMBER_ID = 25305</ValidationSQL>
             <Environment>
                 <EnvironmentCode>DEFAULT</EnvironmentCode>
                 <Before>
