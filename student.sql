@@ -4,7 +4,7 @@ DROP TABLE student;
 -- Create the student table
 CREATE TABLE student (
     student_id INT PRIMARY KEY,
-    first_name VARCHAR(50),
+    first_name VARCHAR(1),
     last_name VARCHAR(50)
 );
 
@@ -13,4 +13,4 @@ INSERT INTO student (student_id, first_name, last_name)
 VALUES (1, 'John', 'Doe');
 
 INSERT INTO student (student_id, first_name, last_name)
-VALUES (2, 'Jane', 'Smith')
+VALUES (smith, 'Jane', '2')
