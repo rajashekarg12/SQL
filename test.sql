@@ -1,1 +1,1 @@
- select * from Fd.users
+ select * from Fd.user
