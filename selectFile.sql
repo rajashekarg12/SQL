@@ -1,2 +1,1 @@
-4select * from seasonal_fruits;
-
+select * from dual;
